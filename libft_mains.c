@@ -1,5 +1,7 @@
 
 #include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 /*  main for ft_atoi
 int	main(int ac, char **av)
@@ -311,9 +313,9 @@ int main(void)
 } */
 
 /* main for ft_toupper
-int main(void)
+int	main(void)
 {
-	int			x;
+	int		x;
 	char	retur;
 
 	x = 'q';
