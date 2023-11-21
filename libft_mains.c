@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft_mains.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/21 12:22:10 by oadewumi          #+#    #+#             */
+/*   Updated: 2023/11/21 12:22:42 by oadewumi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
-#include <unistd.h>
 
 /*  main for ft_atoi
 int	main(int ac, char **av)
@@ -312,7 +323,7 @@ int main(void)
 	write(1, "\n", 1);
 } */
 
-/* main for ft_toupper
+
 int	main(void)
 {
 	int		x;
@@ -321,4 +332,4 @@ int	main(void)
 	x = 'q';
 	retur = ft_toupper(x);
 	write(1, &retur, 1);
-} */
+} 
