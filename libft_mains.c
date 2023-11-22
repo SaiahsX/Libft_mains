@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 12:22:10 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/21 12:22:42 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:58:20 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -323,7 +323,7 @@ int main(void)
 	write(1, "\n", 1);
 } */
 
-
+/* main for ft_toupper
 int	main(void)
 {
 	int		x;
@@ -332,4 +332,82 @@ int	main(void)
 	x = 'q';
 	retur = ft_toupper(x);
 	write(1, &retur, 1);
-} 
+}  */
+
+
+/* main for ft_calloc
+#include <stdio.h>
+
+int	main(void)
+{
+	size_t		i;
+	char	*rnd;
+	size_t	count;
+
+	count = 429;
+	i = 0;
+	rnd = ft_calloc(count, sizeof(rnd));
+	//rnd = ft_calloc(count, 0);
+	while (i < count)
+	{
+		printf("%u", rnd[i]);
+		i++;
+	}
+	free(rnd);
+
+	printf("\n");
+
+// test for original calloc funtion
+	size_t		ix;
+	char	*rndx;
+
+	ix = 0;
+	rndx = calloc(count, sizeof(rndx));
+	//rndx = calloc(count, 0);
+	while (ix < count)
+	{
+		printf("%u", rndx[ix]);
+		ix++;
+	}
+	free(rndx);
+
+	printf("\n");
+	
+
+// extra test for behaviour
+	// if (rnd)
+	// 	printf("calloc has allocated\n");
+	// else
+	// 	printf("nothing has been allocated");
+
+	// rnd = calloc(10, 1);
+	// char	str2[] = "Hello";
+	// ft_strlcat (rnd, str2, 10);
+	// printf("rnd + str2 is now %s\n", rnd);
+} */
+
+
+/* main for ft_strdup
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*string;
+	char	*res;
+
+	string = "Event";
+
+	res = ft_strdup(string);
+	printf("%s\n", res);
+} */
+
+/* main for ft_substr
+#include <stdio.h>
+
+int	main(void)
+{
+	char	s[] = "Helsinki";
+
+	printf("%s\n", ft_substr(s, 12, 10000000000000));
+}
+ */
