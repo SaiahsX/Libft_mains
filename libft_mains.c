@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 12:22:10 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/22 17:58:20 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/25 17:26:48 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -411,3 +411,26 @@ int	main(void)
 	printf("%s\n", ft_substr(s, 12, 10000000000000));
 }
  */
+
+/* Main for ft_strjoin
+#include <stdio.h>
+
+int	main(void)
+{
+	char	d[] = "";
+	char	s[] = "";
+	
+	printf("%s\n", ft_strjoin(d, s));
+} */
+
+/* main for ft_strtrim
+#include <stdio.h>
+
+int	main()
+{
+	char	source[] = "Helsinki";
+	char	set[] = "Helki";
+
+	printf("%s\n", ft_strtrim(source, set));
+} */
+
