@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 12:22:10 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/25 17:26:48 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:43:12 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -434,3 +434,24 @@ int	main()
 	printf("%s\n", ft_strtrim(source, set));
 } */
 
+/* Main for ft_split
+#include <stdio.h>
+
+int	main(void)
+{
+	char const	*str;
+	char		d;
+	char		**res;
+	int			i;
+
+	i = 0;
+	str = "  lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+	d = ' ';
+	res = ft_split(str, d);
+	while (*res != 0)
+	{
+		printf("Ultra split result[%d] =  %s\n", i, *res);
+		res++;
+		i++;
+	}
+} */
