@@ -6,15 +6,15 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 12:22:10 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/12/05 15:40:09 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:59:07 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* #include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-/*  main for ft_atoi
+//main for ft_atoi
 int	main(int ac, char **av)
 {
 	int	mine;
@@ -171,7 +171,7 @@ int	main(void)
 	int	input3;
 	int	input4;
 
-	input1 = -214743648;
+	input1 = -2147483648;
 	ft_putnbr_fd(input1, 1);
 	ft_putchar_fd(('\n'), 1);
 
@@ -410,8 +410,7 @@ int	main(void)
 
 	printf("%s\n", ft_substr(s, 12, 10000000000000));
 	free (subs_string)
-}
- */
+} */
 
 /* Main for ft_strjoin
 #include <stdio.h>
@@ -457,9 +456,9 @@ int	main(void)
 	}
 } */
 
+
 /* Main for ft_strimapi
 #include <stdio.h>
-
 
 char	print_index_and_char(unsigned int index, char character)
 {
@@ -468,14 +467,15 @@ char	print_index_and_char(unsigned int index, char character)
 	//return (character - 32);
 	return (1);
 }
-
 int	main(void)
 {
 	char	str[] = "tetragrammaton";
 
 	ft_strmapi(str, print_index_and_char);
 	printf("%s\n", str);
-} */
+}*/
+
+
 
 /* main for ft_itoa
 #include <stdio.h>
@@ -491,13 +491,12 @@ int	main(void)
 	printf("%s\n", ft_itoa(test2));
 } */
 
-/* Main for bonus ft_lstnew.c
-#include <stdio.h>
 
+/* main for bonus ft_lstnew_bonus.c
+#include <stdio.h>
 //when declaring a struct node t_list	tmp2, and we want the new node to 
 // point to the previous node, also, since tmp2 is a memory in the stack memory
 // and not a pointer, we do not use the arrows '->' but a '.' to make the link. 
-
 int	main(void)
 {
 	char	*ctt;
@@ -511,21 +510,71 @@ int	main(void)
 	printf("%s\n", tmp2.content);
 	free (stack);
 }
- */
 // int main() 
 // {
 //     // Testing the ft_lstnew function
 //     int data = 42;
 //     t_list *node = ft_lstnew(&data);
-
 //     if (node != NULL) {
 //         printf("New node created successfully.\n");
 //         printf("Content of the node: %d\n", *((int *)node->content));
 //     } else {
 //         printf("Failed to create a new node.\n");
 //     }
-
 //     // Freeing allocated memory
 //     free(node);
 //     return 0;
 // }
+*/
+
+
+/* main for ft_lstsize_bonus.c
+ #include <stdio.h>
+
+// a t_list node pointer (*one) is created to test the above function, 
+// one is refered to a new node and on and on until we indicated a NULL.
+int	main(void)
+{
+	t_list	*one;
+
+	one = ft_lstnew("");
+	one->next = ft_lstnew("empt");
+	one->next->next = ft_lstnew("oops");
+	one->next->next->next = NULL;
+
+	int i = ft_lstsize(one);
+	printf("i = %i", i);
+	free(one);
+} */
+
+
+/* main for ft_lstlast_bonus.c
+#include <stdio.h>
+
+int	main(void)
+{
+	t_list	*one;
+	t_list	*last_node;
+	t_list	*temp;
+// This list 'temp' is a receptacle for saving the value of list 'one'.
+// This is used for freeing the allocated memories.
+
+	one = NULL;
+	one = ft_lstnew("Taneli");
+	one->next = ft_lstnew("empt");
+	one->next->next = ft_lstnew("oops");
+	one->next->next->next = NULL;
+	last_node = ft_lstlast(one);
+	if (last_node != NULL)
+		printf("data in the last node = %s\n", last_node->content);
+	else
+		printf("Linked list is empty.\n");
+//Freeing the allocated memory for the linked list nodes
+	while (one != NULL)
+	{
+		temp = one;
+		one = one->next;
+		free(temp);
+	}
+} */
+

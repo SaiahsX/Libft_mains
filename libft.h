@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:30:22 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/29 19:55:28 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/05 20:25:05 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdlib.h>
 
 # define FT_LONG_MAX 9223372036854775807L
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	*ft_memmove(void *dst, const void *src, size_t len);
@@ -33,7 +39,7 @@ void	ft_bzero(void *s, size_t n);
 int		ft_strncmp(const char *src, const char *dest, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 int		ft_isdigit(int num);
 int		ft_isalpha(int alf);
 int		ft_isalnum(int an);
@@ -49,8 +55,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strchr(const char *str, int c);
+char	**ft_split(char const *s, char c);
 char	*ft_strdup(const char *s1);
 char	*ft_itoa(int n);
 
