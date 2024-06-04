@@ -434,7 +434,9 @@ int	main()
 	printf("%s\n", ft_strtrim(source, set));
 } */
 
-/* Main for ft_split
+
+Main for ft_split
+
 #include <stdio.h>
 
 int	main(void)
