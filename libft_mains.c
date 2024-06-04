@@ -435,7 +435,7 @@ int	main()
 } */
 
 
-Main for ft_split
+/*Main for ft_split
 
 #include <stdio.h>
 
