@@ -439,22 +439,22 @@ int	main()
 
 int	main(void)
 {
-	char const	*str;
-	char		d;
-	char		**res;
-	int			i;
+	char	*str;
+	char	**res;
+	int		i;
 
 	i = 0;
 	str = "  lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
-	d = ' ';
-	res = ft_split(str, d);
-	while (*res != 0)
+	res = ft_split(str);
+	while (res[i] != 0)
 	{
-		printf("Ultra split result[%d] =  %s\n", i, *res);
-		res++;
+		printf("Ultra split result[%d] =  %s\n", i, res[i]);
+		free(res[i]);
 		i++;
 	}
-} */
+	free (res);
+}
+*/
 
 
 /* Main for ft_strimapi
